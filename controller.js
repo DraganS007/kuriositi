@@ -4,38 +4,6 @@ $(document).ready(function(){
 	$("#test").swipe( {
         swipeStatus:function(event, phase, direction, distance, duration, fingers)
         {
-          /*var str = "<h4>Swipe Phase : " + phase + "<br/>";
-          str += "Direction from inital touch: " + direction + "<br/>";
-          str += "Distance from inital touch: " + distance + "<br/>";
-          str += "Duration of swipe: " + duration + "<br/>";
-          str += "Fingers used: " + fingers + "<br/></h4>";
-
-          //Here we can check the:
-          //phase : 'start', 'move', 'end', 'cancel'
-          //direction : 'left', 'right', 'up', 'down'
-          //distance : Distance finger is from initial touch point in px
-          //duration : Length of swipe in MS 
-          //fingerCount : the number of fingers used
-          if (phase!="cancel" && phase!="end") {
-            if (duration<5000)
-              str +="Under maxTimeThreshold.<h3>Swipe handler will be triggered if you release at this point.</h3>"
-            else
-              str +="Over maxTimeThreshold. <h3>Swipe handler will be canceled if you release at this point.</h3>"
-          
-            if (distance<200)
-              str +="Not yet reached threshold.  <h3>Swipe will be canceled if you release at this point.</h3>"
-            else
-              str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
-          }
-          
-          if (phase=="cancel")
-            str +="<br/>Handler not triggered. <br/> One or both of the thresholds was not met "
-          if (phase=="end")
-            str +="<br/>Handler was triggered."  
-          
-          $("#test").html(str);*/
-
-
           if(phase == "cancel" || phase == "end"){
           	if($("body").attr("press") == "1"){
 				$("body").attr("press","0");
@@ -105,7 +73,6 @@ $(document).ready(function(){
 	$(document).delegate(document,"keydown",function(e){
 		if($("body").attr("press") == "0"){
 			$("body").attr("press","1");
-			//console.log(e.keyCode);
 			switch(e.keyCode){
 				case 87:
 				case 38:
@@ -204,85 +171,5 @@ $(document).ready(function(){
       	});
 	});
 
-	/*$(".card").click(function(){
-		var page = $(this).attr('id');
-		$.get( page+".php").done(function(data){
-				$(".container").html(data).trigger('create');
-			});
-	});
-
-	$(document).delegate(".card2","click",function(){
-		var gpio = $(this).attr('gpio');
-		var mode = $(this).attr('mode');
-	    var bulb = $(this).attr('bulb');
-	    if($(this).attr("level") == "1"){
-	    	var new_level = 0;
-	    }else{
-	    	var new_level = 1;
-	    }
-	    console.log(new_level);
-			//console.log("gpio "+ gpio + " mode " + mode);
-		if(bulb == "true"){
-			$.post( "control.php",{
-		        gpio:gpio,
-		        mode:new_level
-	        });
-	        if($(this).attr("level") == "1"){
-		    	$(this).attr("level",0);
-		    }else{
-		    	$(this).attr("level",1);
-		    }
-
-	    }else{
-	    	console.log(mode);
-	      if (mode == "on"){      
-	        $(this).attr('mode','off');
-	        $(this).addClass("activeYes");
-	        $(this).removeClass("activeNo");
-	         mode = 1;
-	      }
-	      else{
-	        $(this).attr('mode','on');
-	        $(this).removeClass("activeYes");
-	        $(this).addClass("activeNo");
-	        mode = 0;
-	      }
-
-	      $.post( "control.php",{
-	        gpio:gpio,
-	        mode:mode
-	      });
-	    }
-    
-	});
-
 	
-
-
-	$(".control_button").click(function(){
-		var mode = $(this).attr("mode");
-		var gpio = $(this).attr("gpio");
-
-		if(mode == "on"){
-			$.post("control.php",{
-				mode : mode,
-				pin  : gpio
-			});
-			$(this).removeClass("btn-default");
-			$(this).addClass("btn-success");
-			$(this).attr("mode","off");
-		}
-		else if (mode == "off"){
-			$.post("control.php",{
-				mode : mode,
-				pin  : gpio
-			});
-			$(this).removeClass("btn-success");
-			$(this).addClass("btn-default");
-			$(this).attr("mode","on");
-		}
-	});*/
-
-	 
-
 });
