@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	background-color: #171717;
+}
+
+.title{
+	background-color: #3f51b5;
+	color: #fff;
+	font-family: "RobotoBold";
+}
+.sub-title{
+	font-size: 20px;
+	font-family: "RobotoLight";
+}
+.card{
+	font-family: "RobotoRegular";
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.17);
+	font-size: 25px;
+	padding: 15px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.card2{
+	font-family: "RobotoRegular";
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.17);
+	font-size: 18px;
+	padding: 5px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	height: 150px;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+}
+.svgIcon{
+	bottom: 4px;
+	position: relative;
+	width: 25px;
+}
+.card a{
+	font-family: "RobotoLight";
+	color: #272822;
+	text-decoration: none;
+}
+.card a:hover{
+	color: 
+}
+.icon{
+	width: 50px;
+	position: relative;
+	bottom: 8px;
+	opacity: 0.8;
+}
+.cat{
+	background-color: #C5C5C5;
+	color: #3F3F3F;
+	font-family: "RobotoLight";
+	font-size: 23px;
+	padding: 3px;
+	padding-left: 44px;
+	margin-bottom: 20px
+}
+.img2{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+#dnevna{
+
+}
+.activeNo{
+	border-bottom: 5px solid #e51c23;
+}
+.activeYes{
+	border-bottom: 5px solid #259b24;
+}
+.lastActive{
+	font-size: 11px !important;
+	text-align: left !important;
+}
+
+.wrapCenter{
+	width: 640px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.btnLazer{
+	margin-right: auto;
+	text-align: center;
+	margin-left: auto;
+	font-size: 50px;
+	color: rgb(184, 14, 40);
+	font-weight: 600; 
+	font-family: 'RobotoBold';
+	cursor: pointer;
+}
+.btnRover{
+	margin-right: auto;
+	text-align: center;
+	margin-left: auto;
+	font-size: 50px;
+	color: rgb(190, 190, 190);
+	font-weight: 600; 
+	font-family: 'RobotoBold';
+	cursor: pointer;
+}
+.btnRover:hover{
+	color: rgb(184, 14, 40);
+	transition: all .4s;
+}
+#test{
+	background: white;
+	height: 500px;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
